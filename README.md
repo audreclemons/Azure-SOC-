@@ -1,21 +1,24 @@
 # Building a SOC + Honeynet in Azure (Live Traffic)
-![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+<img width="730" alt="SOC" src="https://github.com/audreclemons/Azure-SOC-/assets/171464782/629daaca-f5f1-4b24-86e8-b46273be44e5">
+
 
 ## Introduction
 
-In this project, I build a mini honeynet in Azure and ingest log sources from various resources into a Log Analytics workspace, which is then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, apply some security controls to harden the environment, measure metrics for another 24 hours, then show the results below. The metrics we will show are:
+In this project, I set up a mini honeynet in Azure and collected log data from various sources into a Log Analytics workspace. Microsoft Sentinel then utilized this data to create attack maps, trigger alerts, and generate incidents. Initially, I measured security metrics in the unsecured environment over 24 hours, applied security controls to harden the environment, and then measured the metrics again for another 24 hours. The results are presented below. The metrics include:
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
 - SecurityAlert (Log Analytics Alerts Triggered)
 - SecurityIncident (Incidents created by Sentinel)
-- AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
+- AzureNetworkAnalytics_CL (Malicious Flows allowed into honeynet)
 
 ## Architecture Before Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
+![Azure_SOC](https://github.com/audreclemons/Azure-SOC-/assets/171464782/4993222e-b81d-4f54-84b7-b80047260b13)
+
 
 ## Architecture After Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
+![Azure_SOC- After](https://github.com/audreclemons/Azure-SOC-/assets/171464782/a2a6384b-d67a-4b1e-a83b-1e1a93ecc093)
+
 
 The architecture of the mini honeynet in Azure consists of the following components:
 
